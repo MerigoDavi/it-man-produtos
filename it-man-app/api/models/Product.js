@@ -9,14 +9,14 @@ module.exports = {
 
   attributes: {
     name: {
-      type: 'string',
+      type: 'varchar',
       required: true
     },
     description: {
       type: 'string'
     },
     price: {
-      type: 'number',
+      type: 'decimal',
       required: true
     },
   },

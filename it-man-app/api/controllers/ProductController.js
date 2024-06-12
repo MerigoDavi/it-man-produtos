@@ -7,7 +7,7 @@
 
 
 module.exports = {
-    create: async function (req, res) {
+    create: async (req, res) {
         try {
             const { name, description, price } = req.allParams();
 
@@ -23,7 +23,7 @@ module.exports = {
         }
     },
 
-    find: async function (req, res) {
+    find: async  (req, res) {
         try {
             const products = await Product.find();
             return res.json(products);
@@ -66,7 +66,7 @@ module.exports = {
         }
     },
 
-    delete: async function (req, res) {
+    delete: async function (req) {
         try {
             const productId = req.param('id');
             const deletedProduct = await Product.destroyOne({ id: productId });
